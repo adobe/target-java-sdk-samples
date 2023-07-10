@@ -13,7 +13,6 @@ package com.adobe.target.sample;
 
 import com.adobe.target.edge.client.ClientConfig;
 import com.adobe.target.edge.client.TargetClient;
-import com.adobe.target.edge.client.model.DecisioningMethod;
 import com.adobe.target.sample.model.Product;
 import com.adobe.target.sample.model.ProductRepository;
 import com.fasterxml.jackson.annotation.JsonInclude;

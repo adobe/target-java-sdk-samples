@@ -24,9 +24,14 @@ import java.util.stream.Collectors;
 public class TargetRequestUtils {
 
     public static Context getContext(HttpServletRequest request) {
+        ClientHints clientHints = new ClientHints();
+        clientHints.setPlatform("macOS");
+        clientHints.setBrowserUAWithFullVersion("\" Not A;Brand\";v=\"99.0.0.0\", \"Chromium\";v=\"98.0.4750.0\", \"Google Chrome\";v=\"90.0.4750.0\"");
+
         Context context = new Context()
                 .channel(ChannelType.WEB)
                 .timeOffsetInMinutes(330.0)
+                .clientHints(clientHints)
                 .address(getAddress(request));
         return context;
     }
@@ -72,6 +77,7 @@ public class TargetRequestUtils {
     public static PrefetchRequest getPrefetchRequest() {
         PrefetchRequest prefetchRequest = new PrefetchRequest();
         ViewRequest viewRequest = new ViewRequest();
+        viewRequest.setName("sample local test");
         prefetchRequest.setViews(Arrays.asList(viewRequest));
         return prefetchRequest;
     }

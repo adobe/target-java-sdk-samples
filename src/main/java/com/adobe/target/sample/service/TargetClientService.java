@@ -43,16 +43,16 @@ public class TargetClientService {
                                                                     HttpServletResponse response) {
 
         Context context = getContext(request);
-
+        PrefetchRequest prefetchRequest = getPrefetchRequest();
         ExecuteRequest executeRequest = new ExecuteRequest();
         RequestDetails pageLoad = new RequestDetails();
         executeRequest.pageLoad(pageLoad);
-
         List<TargetCookie> targetCookies = getTargetCookies(request.getCookies());
 
         TargetDeliveryRequest targetDeliveryRequest = TargetDeliveryRequest.builder()
                 .context(context)
                 .execute(executeRequest)
+                .prefetch(prefetchRequest)
                 .cookies(targetCookies)
                 .build();
         TargetDeliveryResponse serverState = targetJavaClient.getOffers(targetDeliveryRequest);

@@ -77,7 +77,7 @@ public class TargetRequestUtils {
     public static PrefetchRequest getPrefetchRequest() {
         PrefetchRequest prefetchRequest = new PrefetchRequest();
         ViewRequest viewRequest = new ViewRequest();
-        viewRequest.setName("Happy local test");
+        viewRequest.setName("sample local test");
         prefetchRequest.setViews(Arrays.asList(viewRequest));
         return prefetchRequest;
     }

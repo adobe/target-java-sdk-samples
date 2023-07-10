@@ -59,7 +59,6 @@ public class ClientSampleApplication {
         ClientConfig clientConfig = ClientConfig.builder()
                 .client("adobesummit2018")
                 .organizationId("65453EA95A70434F0A495D34@AdobeOrg")
-                .telemetryEnabled(true)
                 .defaultDecisioningMethod(DecisioningMethod.ON_DEVICE)
                 .build();
 

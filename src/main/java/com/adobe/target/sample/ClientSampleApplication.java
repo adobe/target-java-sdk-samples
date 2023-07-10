@@ -57,9 +57,8 @@ public class ClientSampleApplication {
     @Bean
     TargetClient marketingCloudClient() {
         ClientConfig clientConfig = ClientConfig.builder()
-                .client("adobesummit2018")
-                .organizationId("65453EA95A70434F0A495D34@AdobeOrg")
-                .defaultDecisioningMethod(DecisioningMethod.ON_DEVICE)
+                .client("emeaprod4")
+                .organizationId("0DD934B85278256B0A490D44@AdobeOrg")
                 .build();
 
         return TargetClient.create(clientConfig);

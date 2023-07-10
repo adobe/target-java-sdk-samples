@@ -47,8 +47,6 @@ public class TargetClientService {
         ExecuteRequest executeRequest = new ExecuteRequest();
         RequestDetails pageLoad = new RequestDetails();
         executeRequest.pageLoad(pageLoad);
-        executeRequest.addMboxesItem(new MboxRequest().index(0).name("Happy-clientHints"));
-        executeRequest.addMboxesItem(new MboxRequest().index(1).name("don-mbox"));
         List<TargetCookie> targetCookies = getTargetCookies(request.getCookies());
 
         TargetDeliveryRequest targetDeliveryRequest = TargetDeliveryRequest.builder()

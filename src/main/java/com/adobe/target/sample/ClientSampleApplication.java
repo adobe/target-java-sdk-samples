@@ -13,6 +13,7 @@ package com.adobe.target.sample;
 
 import com.adobe.target.edge.client.ClientConfig;
 import com.adobe.target.edge.client.TargetClient;
+import com.adobe.target.edge.client.model.DecisioningMethod;
 import com.adobe.target.sample.model.Product;
 import com.adobe.target.sample.model.ProductRepository;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,8 +57,10 @@ public class ClientSampleApplication {
     @Bean
     TargetClient marketingCloudClient() {
         ClientConfig clientConfig = ClientConfig.builder()
-                .client("emeaprod4")
-                .organizationId("0DD934B85278256B0A490D44@AdobeOrg")
+                .client("adobesummit2018")
+                .organizationId("65453EA95A70434F0A495D34@AdobeOrg")
+                .telemetryEnabled(true)
+                .defaultDecisioningMethod(DecisioningMethod.ON_DEVICE)
                 .build();
 
         return TargetClient.create(clientConfig);

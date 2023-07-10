@@ -11,11 +11,23 @@ repositories {
 }
 
 dependencies {
-    compile 'com.adobe.target:target-java-sdk:1.0.0'
+    implementation 'com.adobe.target:target-java-sdk:2.3.0'
+    implementation 'com.adobe.experiencecloud.ecid:ecid-service:1.0.0'
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.slf4j:slf4j-simple:2.0.0-alpha0'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
+    implementation "org.slf4j:slf4j-api:1.7.30"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:2.11.3"
+    implementation "com.fasterxml.jackson.core:jackson-core:2.11.3"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.11.3"
+    implementation "com.konghq:unirest-java:3.11.02"
+    implementation "io.github.jamsesso:json-logic-java:1.0.5"
+    implementation "org.openjdk.jol:jol-core:0.1"
+
+    testImplementation "org.slf4j:slf4j-simple:1.7.30"
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:5.5.2"
+    testImplementation "org.mockito:mockito-junit-jupiter:3.0.0"
 }
 
 dependencyManagement {
